@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "28ab61b3-0e49-49ed-b91a-27a32526a6f4",
-		"name": "Category",
+		"_postman_id": "b7799a76-a235-48d5-a94d-bf5345677a13",
+		"name": "Person",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/Categorys",
+			"name": "http://localhost:8080/persons",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -15,21 +15,21 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/Categorys",
+					"raw": "http://localhost:8080/persons",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Categorys"
+						"persons"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/Categorys/10002",
+			"name": "http://localhost:8080/persons/1",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -38,22 +38,22 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/Categorys/10002",
+					"raw": "http://localhost:8080/persons/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Categorys",
-						"10002"
+						"persons",
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/Categorys/10002",
+			"name": "http://localhost:8080/persons/1",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -62,22 +62,22 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/Categorys/10002",
+					"raw": "http://localhost:8080/persons/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Categorys",
-						"10002"
+						"persons",
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": " http://localhost:8080/Categorys",
+			"name": " http://localhost:8080/persons",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -90,24 +90,24 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Tom\",\r\n    \"passportNumber\": \"Z1234567\"\r\n  }"
+					"raw": "{\r\n    \"name\": \"Humberto\",\r\n    \"cpf\": \"33556698978\",\r\n\t\"lastName\": \"Pereira\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/Categorys",
+					"raw": "http://localhost:8080/persons",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Categorys"
+						"persons"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/Categorys/1",
+			"name": "http://localhost:8080/persons/1",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -120,18 +120,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"Tomkk\",\r\n\t\"passportNumber\": \"Z1234567\"\r\n}"
+					"raw": "{\r\n    \"name\": \"Humberto\",\r\n    \"cpf\": \"33556698978\",\r\n\t\"lastName\": \"Pereira\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/Categorys/1",
+					"raw": "http://localhost:8080/persons/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Categorys",
-						"1"
+						"persons",
+						"3"
 					]
 				}
 			},

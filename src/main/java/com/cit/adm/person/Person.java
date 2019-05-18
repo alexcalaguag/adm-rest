@@ -1,5 +1,6 @@
 package com.cit.adm.person;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -7,9 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Person {
 	@Id
+	@GeneratedValue
+	@Column(name="id")
 	private Long id;
+	@Column(name="name")
 	private String name;
+	@Column(name="cpf")
 	private String cpf;
+	@Column(name="lastname")
 	private String lastName;
 	
 	public Person() {

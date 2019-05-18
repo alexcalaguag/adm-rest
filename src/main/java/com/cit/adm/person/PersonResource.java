@@ -19,16 +19,16 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class PersonResource {
 
 	@Autowired
-	private PersonRepository PersonRepository;
+	private PersonRepository personRepository;
 
 	@GetMapping("/persons")
 	public List<Person> retrieveAllPersons() {
-		return PersonRepository.findAll();
+		return personRepository.findAll();
 	}
 
 	@GetMapping("/persons/{id}")
 	public Person retrievePerson(@PathVariable long id) {
-		Optional<Person> person = PersonRepository.findById(id);
+		Optional<Person> person = personRepository.findById(id);
 
 		if (!person.isPresent())
 			throw new PersonNotFoundException("id-" + id);
@@ -38,12 +38,12 @@ public class PersonResource {
 
 	@DeleteMapping("/persons/{id}")
 	public void deletePerson(@PathVariable long id) {
-		PersonRepository.deleteById(id);
+		personRepository.deleteById(id);
 	}
 
 	@PostMapping("/persons")
 	public ResponseEntity<Object> createPerson(@RequestBody Person person) {
-		Person savedPerson = PersonRepository.save(person);
+		Person savedPerson = personRepository.save(person);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(savedPerson.getId()).toUri();
@@ -55,14 +55,14 @@ public class PersonResource {
 	@PutMapping("/persons/{id}")
 	public ResponseEntity<Object> updatePerson(@RequestBody Person person, @PathVariable long id) {
 
-		Optional<Person> PersonOptional = PersonRepository.findById(id);
+		Optional<Person> personOptional = personRepository.findById(id);
 
-		if (!PersonOptional.isPresent())
+		if (!personOptional.isPresent())
 			return ResponseEntity.notFound().build();
 
 		person.setId(id);
 
-		PersonRepository.save(person);
+		personRepository.save(person);
 
 		return ResponseEntity.noContent().build();
 	}
